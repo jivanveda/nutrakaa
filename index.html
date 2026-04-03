@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrakaa – Ayurvedic Sugar Control Powder</title>
+<!-- ── META PIXEL (loaded dynamically; Pixel ID set via Admin > Settings) ── -->
+<script>
+  (function(){
+    var pid = localStorage.getItem('nutrakaa_pixel_id');
+    if (!pid) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', pid);
+    fbq('track', 'PageView');
+    window._fbPixelReady = true;
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a6b2f;
+    --green-light: #2d9147;
+    --green-dark: #0f4520;
+    --gold: #e8a020;
+    --gold-light: #f5c842;
+    --cream: #fdf8f0;
+    --white: #ffffff;
+    --text: #1c2b1e;
+    --text-muted: #5a6e5c;
+    --red: #c0392b;
+    --shadow: 0 4px 24px rgba(26,107,47,0.15);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--green-dark);
+    padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon {
+    width: 40px; height: 40px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .logo-text { color: white; font-weight: 900; font-size: 20px; letter-spacing: -0.5px; }
+  .logo-text span { color: var(--gold-light); }
+  .trust-badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* ── ANNOUNCEMENT BAR ── */
+  .announce {
+    background: var(--gold);
+    color: var(--green-dark);
+    text-align: center;
+    padding: 8px;
+    font-weight: 800;
+    font-size: 13px;
+    animation: pulse-bg 2s infinite;
+  }
+  @keyframes pulse-bg {
+    0%,100% { background: var(--gold); }
+    50% { background: var(--gold-light); }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 50%, #2d7a42 100%);
+    padding: 32px 20px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .hero h1 span { color: var(--gold-light); }
+  .hero-sub {
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  /* ── PRODUCT IMAGE BOX ── */
+  .product-img-wrap {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .product-img-wrap::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(232,160,32,0.15), transparent);
+    border-radius: 50%;
+  }
+  .product-main-img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    min-height: 280px;
+    object-fit: contain;
+    position: relative;
+  }
+  /* Fake product image with CSS since we can't load external */
+  .product-placeholder {
+    width: 100%;
+    max-width: 320px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--green), var(--gold), var(--green));
+  }
+  .pp-icon { font-size: 72px; margin-bottom: 8px; }
+  .pp-name { font-size: 13px; font-weight: 800; color: var(--green-dark); text-align: center; padding: 0 20px; }
+  .pp-badge {
+    position: absolute;
+    bottom: 12px; right: 12px;
+    background: var(--green-dark);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .discount-tag {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--red);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 900;
+  }
+  .product-img-wrap .dynamic-img {
+    width: 100%;
+    max-width: 320px;
+    min-height: 260px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #f0f7f1;
+  }
+
+  /* ── PRICE BOX ── */
+  .price-box {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .price-current { font-size: 36px; font-weight: 900; color: var(--green); }
+  .price-mrp { font-size: 18px; color: #aaa; text-decoration: line-through; }
+  .price-save {
+    background: var(--red);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .free-delivery {
+    display: flex; align-items: center; gap: 6px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* ── BUY BTN ── */
+  .buy-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold) 0%, #e8a020 50%, #d4900f 100%);
+    color: var(--green-dark);
+    border: none;
+    border-radius: 16px;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(232,160,32,0.5);
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .buy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+  .buy-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(232,160,32,0.6); }
+  .buy-btn:active { transform: translateY(0); }
+
+  /* ── TRUST STRIPS ── */
+  .trust-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .trust-item {
+    background: white;
+    border-radius: 12px;
+    padding: 10px 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .trust-item .ti { font-size: 24px; }
+  .trust-item p { font-size: 10px; font-weight: 700; color: var(--green-dark); margin-top: 4px; line-height: 1.3; }
+
+  /* ── SECTIONS ── */
+  section { padding: 32px 20px; }
+  .section-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 50px; height: 3px;
+    background: var(--gold);
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ── BENEFITS ── */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .benefit-card {
+    background: white;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+    border-left: 4px solid var(--green);
+  }
+  .benefit-card .bi { font-size: 28px; }
+  .benefit-card h3 { font-size: 13px; font-weight: 800; color: var(--green-dark); }
+  .benefit-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+  /* ── HOW TO USE ── */
+  .htu-section { background: var(--green-dark); }
+  .htu-section .section-title { color: white; }
+  .htu-section .section-title::after { background: var(--gold-light); }
+  .steps { display: flex; flex-direction: column; gap: 16px; }
+  .step {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 14px;
+  }
+  .step-num {
+    min-width: 36px; height: 36px;
+    background: var(--gold);
+    color: var(--green-dark);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .step-text h3 { color: white; font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+  .step-text p { color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.5; }
+
+  /* ── INGREDIENTS ── */
+  .ingredients-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .ingredient-tag {
+    background: white;
+    border: 2px solid var(--green);
+    color: var(--green-dark);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews-section { background: #f0f7f1; }
+  .reviews-grid { display: flex; flex-direction: column; gap: 14px; }
+  .review-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .reviewer-avatar {
+    width: 42px; height: 42px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 900; font-size: 16px;
+  }
+  .reviewer-info h4 { font-size: 14px; font-weight: 800; }
+  .reviewer-info p { font-size: 11px; color: var(--text-muted); }
+  .stars { color: var(--gold); font-size: 14px; }
+  .review-text { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .verified { font-size: 10px; color: var(--green); font-weight: 700; margin-top: 8px; }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; gap: 10px; }
+  .faq-item {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .faq-q {
+    padding: 14px 16px;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--green-dark);
+  }
+  .faq-q .arrow { transition: transform 0.3s; color: var(--green); }
+  .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding: 0 16px;
+  }
+  .faq-item.open .faq-a { max-height: 200px; padding: 0 16px 14px; }
+
+  /* ── STICKY FOOTER BUY ── */
+  .sticky-buy {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: white;
+    padding: 12px 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    z-index: 100;
+    display: none;
+  }
+  .sticky-buy.visible { display: block; }
+  .sticky-buy .buy-btn { margin-bottom: 0; padding: 14px; font-size: 18px; }
+
+  /* ── MODAL OVERLAY ── */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+  }
+  .modal-overlay.active { display: flex; }
+
+  /* ── ORDER FORM MODAL ── */
+  .order-modal {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 24px 24px 0 0;
+    padding: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-height: 95vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .modal-overlay.active .order-modal { transform: translateY(0); }
+
+  .modal-handle {
+    width: 40px; height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    margin: 12px auto;
+  }
+
+  .modal-header {
+    background: linear-gradient(135deg, var(--green-dark), var(--green));
+    color: white;
+    padding: 20px 20px 24px;
+    position: relative;
+  }
+  .modal-header h2 { font-size: 20px; font-weight: 900; margin-bottom: 4px; }
+  .modal-header p { font-size: 13px; opacity: 0.85; }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .cod-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--gold);
+    color: var(--green-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    margin-top: 8px;
+  }
+
+  /* ── FORM ── */
+  .order-form { padding: 20px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 6px;
+  }
+  .form-group label span { color: var(--red); }
+  .form-control {
+    width: 100%;
+    padding: 13px 14px;
+    border: 2px solid #e0e8e1;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fafffe;
+  }
+  .form-control:focus { border-color: var(--green); background: white; }
+  .form-control.error { border-color: var(--red); }
+
+  .pincode-row { display: flex; gap: 8px; }
+  .pincode-row .form-control { flex: 1; }
+  .pin-fetch-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px 14px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .city-state-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  /* ── QTY SELECTOR ── */
+  .qty-selector {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .qty-btn {
+    width: 38px; height: 38px;
+    border: 2px solid var(--green);
+    background: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--green);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .qty-input {
+    width: 50px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    border: 2px solid #e0e8e1;
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  /* ── ORDER SUMMARY ── */
+  .order-summary {
+    background: var(--cream);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #d9e8db;
+  }
+  .summary-row {
+    display: flex; justify-content: space-between;
+    font-size: 13px;
+    padding: 3px 0;
+  }
+  .summary-row.total {
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--green);
+    border-top: 1px dashed #ccc;
+    margin-top: 6px;
+    padding-top: 8px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(26,107,47,0.4);
+    transition: transform 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .submit-btn:hover { transform: translateY(-2px); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .form-note {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    display: flex; align-items: center; justify-content: center; gap: 4px;
+  }
+
+  /* ── SUCCESS STATE ── */
+  .success-state {
+    padding: 40px 20px;
+    text-align: center;
+    display: none;
+  }
+  .success-icon {
+    width: 80px; height: 80px;
+    background: #e8f5e9;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 16px;
+    animation: bounce-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes bounce-in {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+  .success-state h2 { font-size: 24px; font-weight: 900; color: var(--green); margin-bottom: 8px; }
+  .success-state p { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+  .order-id-box {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 12px;
+    margin: 16px 0;
+    font-weight: 800;
+    color: var(--green-dark);
+    font-size: 14px;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    width: 20px; height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--green-dark);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+  footer strong { color: white; }
+  .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; }
+  .footer-links a { color: var(--gold-light); text-decoration: none; font-weight: 700; font-size: 12px; }
+
+  @media (min-width: 480px) {
+    .modal-overlay { align-items: center; padding: 20px; }
+    .order-modal { border-radius: 24px; max-height: 90vh; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CONFIG: Change this to your backend URL after deploying -->
+<script>
+  // Uses saved URL from Admin > Settings if available, else falls back to default
+  const API_BASE = localStorage.getItem('nutrakaa_api_url') || 'https://YOUR-BACKEND.onrender.com';
+  // For local testing: use 'http://localhost:5000'
+</script>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce">
+  🎉 सीमित ऑफर: आज ₹400 की बचत करें — मुफ्त डिलीवरी | Cash on Delivery Available
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">🌿</div>
+    <div class="logo-text">Nutra<span>kaa</span></div>
+  </div>
+  <div class="trust-badge">✅ COD Available</div>
+</header>
+
+<!-- HERO SECTION -->
+<div class="hero">
+  <div class="hero-tag">🌿 100% Ayurvedic • No Side Effects</div>
+  <h1 id="heroTitle">Ayurvedic <span>Sugar Control</span> Powder</h1>
+  <p class="hero-sub" id="heroDesc">Naturally manage blood sugar with powerful Ayurvedic herbs. Trusted by 10,000+ customers across India.</p>
+
+  <!-- PRODUCT IMAGE -->
+  <div class="product-img-wrap">
+    <div class="discount-tag">40% OFF</div>
+    <div id="productImgContainer">
+      <!-- Dynamic image loaded from backend, or placeholder -->
+      <div class="product-placeholder">
+        <div class="pp-icon">🌿</div>
+        <div class="pp-name" id="ppName">Nutrakaa Sugar Control Powder</div>
+        <div class="pp-badge">Ayurvedic</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICE -->
+  <div class="price-box">
+    <div class="price-row">
+      <div class="price-current" id="priceDisplay">₹599</div>
+      <div class="price-mrp" id="mrpDisplay">₹999</div>
+      <div class="price-save" id="saveDisplay">Save ₹400</div>
+    </div>
+    <div class="free-delivery">🚚 Free Delivery &nbsp;|&nbsp; 💰 Cash on Delivery</div>
+  </div>
+
+  <!-- BUY NOW -->
+  <button class="buy-btn" onclick="openOrderModal()">
+    🛒 अभी ऑर्डर करें — COD
+  </button>
+
+  <!-- TRUST STRIPS -->
+  <div class="trust-row">
+    <div class="trust-item"><div class="ti">🏅</div><p>Ayush Approved</p></div>
+    <div class="trust-item"><div class="ti">🚚</div><p>Free Delivery</p></div>
+    <div class="trust-item"><div class="ti">💰</div><p>Cash on Delivery</p></div>
+    <div class="trust-item"><div class="ti">🌿</div><p>Natural & Safe</p></div>
+    <div class="trust-item"><div class="ti">🔄</div><p>Easy Returns</p></div>
+    <div class="trust-item"><div class="ti">⭐</div><p>4.8★ Rated</p></div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section>
+  <h2 class="section-title">क्यों चुनें Nutrakaa?</h2>
+  <div class="benefits-grid" id="benefitsGrid">
+    <div class="benefit-card"><div class="bi">🩸</div><h3>Blood Sugar Control</h3><p>Naturally regulates glucose levels without medicines</p></div>
+    <div class="benefit-card"><div class="bi">⚡</div><h3>Boosts Energy</h3><p>Feel active and energetic throughout the day</p></div>
+    <div class="benefit-card"><div class="bi">🛡️</div><h3>No Side Effects</h3><p>100% herbal, safe for long-term use</p></div>
+    <div class="benefit-card"><div class="bi">🏥</div><h3>Clinically Tested</h3><p>Formulated by Ayurvedic doctors</p></div>
+    <div class="benefit-card"><div class="bi">💊</div><h3>Reduce Medicine</h3><p>Gradually reduce dependency on sugar pills</p></div>
+    <div class="benefit-card"><div class="bi">❤️</div><h3>Heart & Kidney</h3><p>Protects vital organs from sugar damage</p></div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="htu-section">
+  <h2 class="section-title">कैसे उपयोग करें?</h2>
+  <div class="steps" id="howToUseSteps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><h3>सुबह खाली पेट</h3><p>1 चम्मच गर्म पानी या दूध में मिलाएं और पिएं</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><h3>शाम को खाने से पहले</h3><p>रात के खाने से 30 मिनट पहले एक और खुराक लें</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><h3>नियमित उपयोग करें</h3><p>3 महीने में दिखाई देंगे शानदार परिणाम</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section>
+  <h2 class="section-title">प्राकृतिक सामग्री</h2>
+  <div class="ingredients-list" id="ingredientsList">
+    <div class="ingredient-tag">🫛 करेला</div>
+    <div class="ingredient-tag">🫐 जामुन</div>
+    <div class="ingredient-tag">🌱 मेथी</div>
+    <div class="ingredient-tag">🍃 गिलोय</div>
+    <div class="ingredient-tag">🌿 विजयसार</div>
+    <div class="ingredient-tag">🌾 गुड़मार</div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <h2 class="section-title">ग्राहकों की राय</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-header">
+        <div class="reviewer-avatar">R</div>
+        <div class="reviewer-info">
+          <h4>Ramesh Kumar</h4>
+          <p>Delhi, India</p>
+        </div>
+        <div class="stars" style="margin-left:auto">★★★★★</div>
+      </div>
+      <p class="review-text">"3 महीने के उपयोग के बाद मेरी शुगर 280 से 140 हो गई। बिल्कुल natural product है।"</p>
+      <div class="verified">✅ Verified Purchase</div>
+    </div>
+    <div class="review-card">
+      <div class="review-header">
+        <div class="reviewer-avatar" style="background:#e67e22">S</div>
+        <div class="reviewer-info">
+          <h4>Sunita Devi</h4>
+          <p>Lucknow, UP</p>
+        </div>
+        <div class="stars" style="margin-left:auto">★★★★★</div>
+      </div>
+      <p class="review-text">"मेरे पति को diabetes थी, अब वो बिल्कुल ठीक हैं। यह powder वाकई काम करता है।"</p>
+      <div class="verified">✅ Verified Purchase</div>
+    </div>
+    <div class="review-card">
+      <div class="review-header">
+        <div class="reviewer-avatar" style="background:#8e44ad">A</div>
+        <div class="reviewer-info">
+          <h4>Arun Singh</h4>
+          <p>Patna, Bihar</p>
+        </div>
+        <div class="stars" style="margin-left:auto">★★★★☆</div>
+      </div>
+      <p class="review-text">"Cash on delivery option बहुत अच्छा है। Product quality excellent है। Highly recommended!"</p>
+      <div class="verified">✅ Verified Purchase</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <h2 class="section-title">अक्सर पूछे जाने वाले सवाल</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">क्या यह सुरक्षित है? <span class="arrow">▼</span></div>
+      <div class="faq-a">हाँ, यह 100% प्राकृतिक Ayurvedic सामग्री से बना है और इसका कोई side effect नहीं है।</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">कितने दिन में असर दिखेगा? <span class="arrow">▼</span></div>
+      <div class="faq-a">अधिकांश ग्राहकों को 4-6 हफ्ते में असर दिखता है। 3 महीने के नियमित उपयोग से बेहतरीन परिणाम मिलते हैं।</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Cash on Delivery कैसे काम करता है? <span class="arrow">▼</span></div>
+      <div class="faq-a">Order place करें, घर पर delivery मिलने पर cash दें। कोई advance payment नहीं।</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">क्या इसे medicines के साथ ले सकते हैं? <span class="arrow">▼</span></div>
+      <div class="faq-a">हाँ, लेकिन अपने doctor से एक बार परामर्श लें। यह आपकी medicines की dependency धीरे-धीरे कम करने में मदद करता है।</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM BUY -->
+<section style="padding: 20px; background: var(--green-dark);">
+  <button class="buy-btn" onclick="openOrderModal()" style="box-shadow: 0 6px 20px rgba(232,160,32,0.6);">
+    🛒 अभी ऑर्डर करें — Cash on Delivery
+  </button>
+  <p style="text-align:center; color: rgba(255,255,255,0.7); font-size: 12px; margin-top: 10px;">🔒 Secure Order • Free Delivery Across India</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Return Policy</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <strong>Nutrakaa Ayurveda</strong><br>
+  📞 Customer Care: +91-XXXXXXXXXX<br>
+  📧 support@nutrakaa.com<br><br>
+  © 2024 Nutrakaa. All rights reserved.
+</footer>
+
+<!-- STICKY BUY BUTTON -->
+<div class="sticky-buy" id="stickyBuy">
+  <button class="buy-btn" onclick="openOrderModal()">🛒 अभी ऑर्डर करें — COD</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- ORDER MODAL -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="order-modal" id="orderModal">
+    <div class="modal-handle"></div>
+
+    <!-- MODAL HEADER -->
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeOrderModal()">✕</button>
+      <h2>🛒 Order करें अभी</h2>
+      <p>आपकी जानकारी भरें — हम call करेंगे</p>
+      <div class="cod-tag">💰 Cash on Delivery — कोई advance नहीं</div>
+    </div>
+
+    <!-- ORDER FORM -->
+    <div class="order-form" id="orderFormWrap">
+      <form id="orderForm" onsubmit="submitOrder(event)">
+
+        <!-- Name -->
+        <div class="form-group">
+          <label>पूरा नाम <span>*</span></label>
+          <input type="text" class="form-control" id="fname" placeholder="जैसे: Ramesh Kumar" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label>मोबाइल नंबर <span>*</span></label>
+          <input type="tel" class="form-control" id="fphone" placeholder="10 अंकों का नंबर" maxlength="10" required pattern="[6-9]\d{9}">
+        </div>
+
+        <!-- Pincode -->
+        <div class="form-group">
+          <label>Pincode <span>*</span></label>
+          <div class="pincode-row">
+            <input type="text" class="form-control" id="fpincode" placeholder="6 अंकों का Pincode" maxlength="6" inputmode="numeric" oninput="onPincodeInput(this)">
+            <button type="button" class="pin-fetch-btn" id="pinBtn" onclick="fetchPincode()">Auto-Fill</button>
+          </div>
+        </div>
+
+        <!-- City & State -->
+        <div class="city-state-row">
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" id="fcity" placeholder="शहर" readonly>
+          </div>
+          <div class="form-group">
+            <label>State</label>
+            <input type="text" class="form-control" id="fstate" placeholder="राज्य" readonly>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+          <label>पूरा पता <span>*</span></label>
+          <textarea class="form-control" id="faddress" rows="2" placeholder="घर नंबर, गली, मोहल्ला..." required style="resize:none"></textarea>
+        </div>
+
+        <!-- Quantity -->
+        <div class="form-group">
+          <label>कितने पैकेट चाहिए?</label>
+          <div class="qty-selector">
+            <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
+            <input type="number" class="qty-input form-control" id="fqty" value="1" min="1" max="10" readonly>
+            <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+            <span style="font-size:12px; color:var(--text-muted)">×</span>
+            <span style="font-size:14px; font-weight:800; color:var(--green)" id="qtyPriceLabel">₹599</span>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <div class="summary-row"><span>Product Price</span><span id="sumProductName">Nutrakaa Sugar Control</span></div>
+          <div class="summary-row"><span>Quantity</span><span id="sumQty">1</span></div>
+          <div class="summary-row"><span>Delivery</span><span style="color:var(--green)">FREE</span></div>
+          <div class="summary-row total"><span>Total (COD)</span><span id="sumTotal">₹599</span></div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span id="submitText">✅ Order Confirm करें</span>
+          <div class="spinner" id="submitSpinner" style="display:none"></div>
+        </button>
+
+        <p class="form-note">🔒 आपकी जानकारी पूरी तरह सुरक्षित है। हम call करके confirm करेंगे।</p>
+      </form>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div class="success-state" id="successState">
+      <div class="success-icon">🎉</div>
+      <h2>Order Placed!</h2>
+      <p>बधाई हो! आपका order हमें मिल गया।<br>हम जल्द ही आपसे call पर बात करेंगे।</p>
+      <div class="order-id-box">Order ID: <span id="displayOrderId">—</span></div>
+      <p style="font-size:12px; color: var(--text-muted)">📦 डिलीवरी: 5-7 कार्य दिवसों में<br>💰 Delivery पर Cash Payment</p>
+      <button class="submit-btn" style="margin-top:20px" onclick="closeOrderModal()">✕ बंद करें</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+// API_BASE is set above in the config block
+
+let currentProduct = null;
+let currentPrice = 599;
+
+// ── LOAD PRODUCT ────────────────────────────────────────────────────────────
+async function loadProduct() {
+  try {
+    const res = await fetch(`${API_BASE}/api/products`);
+    const data = await res.json();
+    if (data.success && data.products.length > 0) {
+      const p = data.products[0];
+      currentProduct = p;
+      currentPrice = p.price;
+      
+      // Update UI
+      document.getElementById('heroTitle').innerHTML = p.name.replace('Nutrakaa ', 'Nutrakaa <span>').replace(' Powder', ' Powder</span>');
+      if (p.description) document.getElementById('heroDesc').textContent = p.description;
+      document.getElementById('priceDisplay').textContent = '₹' + p.price;
+      if (p.mrp) {
+        document.getElementById('mrpDisplay').textContent = '₹' + p.mrp;
+        document.getElementById('saveDisplay').textContent = 'Save ₹' + (p.mrp - p.price);
+      }
+      document.getElementById('ppName').textContent = p.name;
+      document.getElementById('qtyPriceLabel').textContent = '₹' + p.price;
+      updateSummary();
+
+      // Load image if available
+      if (p.images && p.images.length > 0 && p.images[0].startsWith('http')) {
+        const imgEl = document.createElement('img');
+        imgEl.src = p.images[0];
+        imgEl.className = 'dynamic-img';
+        imgEl.onerror = function() { this.style.display = 'none'; };
+        document.getElementById('productImgContainer').innerHTML = '';
+        document.getElementById('productImgContainer').appendChild(imgEl);
+      }
+
+      // Load benefits
+      if (p.benefits && p.benefits.length > 0) {
+        const icons = ['🩸','⚡','🛡️','🏥','💊','❤️'];
+        document.getElementById('benefitsGrid').innerHTML = p.benefits.map((b,i) => `
+          <div class="benefit-card">
+            <div class="bi">${icons[i%icons.length]}</div>
+            <h3>${b}</h3>
+          </div>
+        `).join('');
+      }
+
+      // Load ingredients
+      if (p.ingredients) {
+        const ingList = p.ingredients.split(',').map(s => s.trim()).filter(Boolean);
+        document.getElementById('ingredientsList').innerHTML = ingList.map(ing => 
+          `<div class="ingredient-tag">🌿 ${ing}</div>`
+        ).join('');
+      }
+    }
+  } catch(err) {
+    console.log('Using default product data');
+  }
+}
+
+// ── MODAL ────────────────────────────────────────────────────────────────────
+function openOrderModal() {
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  // Meta Pixel: InitiateCheckout event
+  if (window.fbq) fbq('track', 'InitiateCheckout');
+}
+function closeOrderModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+  // Reset form
+  setTimeout(() => {
+    document.getElementById('orderFormWrap').style.display = 'block';
+    document.getElementById('successState').style.display = 'none';
+    document.getElementById('orderForm').reset();
+    updateSummary();
+  }, 400);
+}
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeOrderModal();
+}
+
+// ── PINCODE ──────────────────────────────────────────────────────────────────
+function onPincodeInput(input) {
+  input.value = input.value.replace(/\D/g, '');
+  if (input.value.length === 6) fetchPincode();
+}
+async function fetchPincode() {
+  const pin = document.getElementById('fpincode').value;
+  if (pin.length !== 6) return alert('कृपया 6 अंकों का pincode दर्ज करें');
+  
+  const btn = document.getElementById('pinBtn');
+  btn.textContent = '...';
+  btn.disabled = true;
+  
+  try {
+    const res = await fetch(`${API_BASE}/api/pincode/${pin}`);
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('fcity').value = data.city;
+      document.getElementById('fstate').value = data.state;
+    } else {
+      alert('Pincode नहीं मिला। कृपया manually दर्ज करें।');
+      document.getElementById('fcity').removeAttribute('readonly');
+      document.getElementById('fstate').removeAttribute('readonly');
+    }
+  } catch(e) {
+    document.getElementById('fcity').removeAttribute('readonly');
+    document.getElementById('fstate').removeAttribute('readonly');
+  }
+  btn.textContent = 'Auto-Fill';
+  btn.disabled = false;
+}
+
+// ── QUANTITY ─────────────────────────────────────────────────────────────────
+function changeQty(delta) {
+  const input = document.getElementById('fqty');
+  let val = parseInt(input.value) + delta;
+  if (val < 1) val = 1;
+  if (val > 10) val = 10;
+  input.value = val;
+  updateSummary();
+}
+function updateSummary() {
+  const qty = parseInt(document.getElementById('fqty').value) || 1;
+  const total = currentPrice * qty;
+  document.getElementById('sumQty').textContent = qty;
+  document.getElementById('sumTotal').textContent = '₹' + total;
+  document.getElementById('qtyPriceLabel').textContent = '₹' + total;
+  if (currentProduct) document.getElementById('sumProductName').textContent = currentProduct.name.substring(0, 20) + '...';
+}
+document.getElementById('fqty').addEventListener('change', updateSummary);
+
+// ── SUBMIT ORDER ─────────────────────────────────────────────────────────────
+async function submitOrder(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const pincode = document.getElementById('fpincode').value.trim();
+  const address = document.getElementById('faddress').value.trim();
+  const city = document.getElementById('fcity').value.trim();
+  const state = document.getElementById('fstate').value.trim();
+  const quantity = parseInt(document.getElementById('fqty').value);
+
+  if (!name || !phone || !pincode || !address) {
+    alert('कृपया सभी जरूरी जानकारी भरें');
+    return;
+  }
+  if (!/^[6-9]\d{9}$/.test(phone)) {
+    alert('कृपया सही 10 अंकों का मोबाइल नंबर दर्ज करें');
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  document.getElementById('submitText').style.display = 'none';
+  document.getElementById('submitSpinner').style.display = 'block';
+  btn.disabled = true;
+
+  const payload = {
+    name, phone, pincode, city, state, address, quantity,
+    productId: currentProduct?._id || 'default',
+    productName: currentProduct?.name || 'Nutrakaa Sugar Control Powder',
+    price: currentPrice,
+    totalAmount: currentPrice * quantity
+  };
+
+  try {
+    const res = await fetch(`${API_BASE}/api/orders`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    
+    if (data.success) {
+      document.getElementById('orderFormWrap').style.display = 'none';
+      document.getElementById('successState').style.display = 'block';
+      document.getElementById('displayOrderId').textContent = '#' + data.orderId.toString().slice(-8).toUpperCase();
+      // Meta Pixel: Purchase event
+      if (window.fbq) {
+        fbq('track', 'Purchase', {
+          value: payload.totalAmount || payload.price || 0,
+          currency: 'INR',
+          content_name: payload.productName || 'Nutrakaa Product',
+          content_type: 'product'
+        });
+      }
+    } else {
+      alert('Order failed: ' + (data.error || 'Please try again'));
+    }
+  } catch(err) {
+    alert('Network error. Please check your connection and try again.');
+  }
+
+  document.getElementById('submitText').style.display = 'inline';
+  document.getElementById('submitSpinner').style.display = 'none';
+  btn.disabled = false;
+}
+
+// ── FAQ TOGGLE ───────────────────────────────────────────────────────────────
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  item.classList.toggle('open');
+}
+
+// ── STICKY BUY ───────────────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const heroEnd = document.querySelector('.hero').offsetTop + document.querySelector('.hero').offsetHeight;
+  document.getElementById('stickyBuy').classList.toggle('visible', window.scrollY > heroEnd + 200);
+});
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+loadProduct();
+</script>
+</body>
+</html>
